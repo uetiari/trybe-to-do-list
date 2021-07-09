@@ -1,10 +1,14 @@
 .title {
   font-size: 20px;
   font-family: Verdana, Tahoma, sans-serif;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 #funcionamento {
   font-family: Verdana, sans-serif;
   color: grey;
+}
+
+.checked {
+   background-color: rgb(128,128,128);
 }
