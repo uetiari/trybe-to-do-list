@@ -10,7 +10,7 @@ window.onload = function () {
     inputTarefa.value = '';
 
     listItens.addEventListener('click', function changeChecked() {
-      if (listItens.classList.contains('checked')) {
+      if (listItens.classList.contains('checked')) { // Utilizei o Contains por experiência passada com mesmo tipo de projeto.
         listItens.classList.remove('checked');
       } else {
         listItens.classList.add('checked');
