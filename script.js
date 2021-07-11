@@ -9,22 +9,28 @@ window.onload = function () {
     listItens.innerHTML = inputTarefa.value;
     inputTarefa.value = '';
 
-    listItens.addEventListener('click', checked);
-
-  });
-
-  function checked(event) {
-    const lis = document.querySelectorAll('li');
-    const background = 'rgb(128, 128, 128)';
-    for (let index = 0; index < lis.length; index += 1) {
-      if (lis[index].style.backgroundColor === background) {
-        lis[index].style.backgroundColor = 'white';
-      } else {
-        event.target.style.backgroundColor = background;
+    listItens.addEventListener('click',  function checked(event){
+      const lis = document.querySelectorAll('li');
+      const background = 'rgb(128, 128, 128)';
+      for (let index = 0; index < lis.length; index += 1) {
+        if (lis[index].style.backgroundColor === background) {
+          lis[index].style.backgroundColor = 'white';
+        } else {
+          event.target.style.backgroundColor = background;
+        }
       }
-    }
-  }
-  // Com ajuda do colega Luiz Gustavo consegui desenrolar o item 8! Valew!
+    });
+  })
+ 
+  listTarefa.addEventListener('dblclick',  function completed(event){
+    const lisArray = document.querySelectorAll('li');
+
+    if(event.target.classList.contains('completed')){
+      event.target.classList.remove('completed');
+    } else {
+      event.target.classList.add('completed');
+      }
+    });
 }
-
-
+ // Com ajuda do colega Luiz Gustavo consegui desenrolar o item 8 e 9! Valew!
+ 
