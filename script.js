@@ -10,7 +10,7 @@ window.onload = function () {
     inputTarefa.value = '';
 
     listItens.addEventListener('click', checked);
-    
+
   });
 
   function checked(event) {
@@ -24,6 +24,7 @@ window.onload = function () {
       }
     }
   }
+  // Com ajuda do colega Luiz Gustavo consegui desenrolar o item 8! Valew!
 }
 
 
