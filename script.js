@@ -9,12 +9,21 @@ window.onload = function () {
     listItens.innerHTML = inputTarefa.value;
     inputTarefa.value = '';
 
-    listItens.addEventListener('click', function () {
-      if (listItens.classList.contains('checked')) { // Utilizei o Contains por experiência passada com mesmo tipo de projeto.
-        listItens.classList.remove('checked');
-      } else {
-        listItens.classList.add('checked');
-      }
-    });
+    listItens.addEventListener('click', checked);
+    
   });
-};
+
+  function checked(event) {
+    const lis = document.querySelectorAll('li');
+    const background = 'rgb(128, 128, 128)';
+    for (let index = 0; index < lis.length; index += 1) {
+      if (lis[index].style.backgroundColor === background) {
+        lis[index].style.backgroundColor = 'white';
+      } else {
+        event.target.style.backgroundColor = background;
+      }
+    }
+  }
+}
+
+
