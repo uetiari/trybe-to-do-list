@@ -9,7 +9,7 @@ window.onload = function () {
     listItens.innerHTML = inputTarefa.value;
     inputTarefa.value = '';
 
-    listItens.addEventListener('click',  function checked(event){
+    listItens.addEventListener('click',  function checked(event) {
       const lis = document.querySelectorAll('li');
       const background = 'rgb(128, 128, 128)';
       for (let index = 0; index < lis.length; index += 1) {
@@ -20,9 +20,15 @@ window.onload = function () {
         }
       }
     });
+
+    const eraseAll = document.getElementById('apaga-tudo');
+    eraseAll.addEventListener('click', function(){
+      listItens.remove();
+    })
+
   })
  
-  listTarefa.addEventListener('dblclick',  function completed(event){
+  listTarefa.addEventListener('dblclick',  function completed(event) {
     const lisArray = document.querySelectorAll('li');
 
     if(event.target.classList.contains('completed')){
@@ -30,7 +36,6 @@ window.onload = function () {
     } else {
       event.target.classList.add('completed');
       }
-    });
+    }); 
 }
  // Com ajuda do colega Luiz Gustavo consegui desenrolar o item 8 e 9! Valew!
- 
