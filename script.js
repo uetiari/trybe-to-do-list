@@ -22,20 +22,27 @@ window.onload = function () {
     });
 
     const eraseAll = document.getElementById('apaga-tudo');
-    eraseAll.addEventListener('click', function(){
+    eraseAll.addEventListener('click', function erase(){
       listItens.remove();
     })
 
-  })
+  });
  
   listTarefa.addEventListener('dblclick',  function completed(event) {
     const lisArray = document.querySelectorAll('li');
-
     if(event.target.classList.contains('completed')){
       event.target.classList.remove('completed');
     } else {
       event.target.classList.add('completed');
       }
-    }); 
+  });
+
+  const buttonFinished = document.getElementById('remover-finalizados');
+  buttonFinished.addEventListener('click', function removeFinished(event) {
+    const lisArray = document.querySelectorAll('.completed');
+   for(let index = 0; index < lisArray.length; index += 1){
+     lisArray[index].remove();
+   }
+  });
 }
  // Com ajuda do colega Luiz Gustavo consegui desenrolar o item 8 e 9! Valew!

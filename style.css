@@ -40,3 +40,16 @@
   background-color: red;
   color: white;
 }
+
+#remover-finalizados {
+  background-color: lightskyblue;
+  color: black;
+}
+#remover-finalizados:hover {
+  background-color: blue;
+  color: white;
+}
+
+.control_panel{
+  display: inline-block;
+}
